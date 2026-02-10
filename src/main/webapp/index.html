@@ -1,132 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Devops App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <title>Ankith Portfolio</title>
+
+  <!-- FreeCodeCamp Test Script (optional) -->
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+
+  <!-- Font Awesome (for icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
-    * {
-      box-sizing: border-box;
+    :root {
+      --main-red: #be3144;
+      --main-blue: #45567d;
+      --main-white: #f0f0f0;
+      --main-gray: #303841;
     }
 
     body {
       margin: 0;
-      font-family: "Segoe UI", Roboto, system-ui, -apple-system, Arial, sans-serif;
-      min-height: 100vh;
-      background: linear-gradient(135deg, #667eea, #764ba2, #6b8cff);
-      background-size: 400% 400%;
-      animation: gradientMove 12s ease infinite;
+      font-family: Arial, sans-serif;
+    }
+
+    /* NAVBAR */
+    .nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: var(--main-red);
+      padding: 1rem;
+    }
+
+    .nav-list {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.15);
-      backdrop-filter: blur(14px);
-      border-radius: 20px;
-      padding: 48px 56px;
-      max-width: 640px;
-      width: 92%;
-      text-align: center;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
-    }
-
-    h1 {
+      justify-content: flex-end;
+      list-style: none;
       margin: 0;
-      font-size: 2.6rem;
-      letter-spacing: 0.6px;
+      padding: 0;
     }
 
-    h1 span {
-      background: linear-gradient(90deg, #ffe259, #ffa751);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    .nav-list li {
+      margin-left: 2rem;
     }
 
-    p {
-      margin: 14px 0;
-      font-size: 1.1rem;
-      line-height: 1.7;
-      opacity: 0.95;
-    }
-
-    .badge {
-      display: inline-block;
-      margin: 18px 0 10px;
-      padding: 8px 18px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.35);
-      font-size: 0.95rem;
-      letter-spacing: 0.4px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 22px;
-      padding: 14px 28px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #ff512f, #dd2476);
-      color: #ffffff;
+    .nav-list a {
+      color: white;
       text-decoration: none;
-      font-size: 1.05rem;
-      font-weight: 600;
-      box-shadow: 0 12px 25px rgba(221, 36, 118, 0.5);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      font-size: 1.2rem;
     }
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 18px 35px rgba(221, 36, 118, 0.7);
+    /* WELCOME SECTION */
+    .welcome-section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      width: 100%;
+      height: 100vh;
+      background-color: #0ff;
     }
 
+    .welcome-section > p {
+      font-size: 2rem;
+      font-style: italic;
+      color: var(--main-red);
+    }
+
+    /* PROJECTS SECTION */
+    .projects-section {
+      text-align: center;
+      padding: 10rem 2rem;
+      background: var(--main-blue);
+      color: white;
+    }
+
+    .projects-section-header {
+      max-width: 640px;
+      margin: 0 auto 3rem auto;
+      border-bottom: 0.2rem solid var(--main-white);
+      padding-bottom: 1rem;
+    }
+
+    .projects-grid {
+      display: flex;
+      justify-content: center;
+    }
+
+    .project-image {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .project-title {
+      margin-top: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      background: var(--main-gray);
+      color: white;
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .contact-details {
+      display: inline-block;
+      margin: 1rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    /* FOOTER */
     footer {
-      margin-top: 26px;
-      font-size: 0.9rem;
-      opacity: 0.75;
+      font-weight: 300;
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      background: var(--main-gray);
+      border-top: 4px solid var(--main-red);
+      color: white;
     }
 
-    code {
-      background: rgba(0, 0, 0, 0.35);
-      padding: 4px 10px;
-      border-radius: 999px;
-      font-size: 0.9rem;
+    footer a {
+      color: var(--main-white);
+      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
-  <div class="card">
-    <h1>🚀 <span>DevOps App</span></h1>
 
+  <!-- NAV -->
+  <nav id="navbar" class="nav">
+    <ul class="nav-list">
+      <li><a href="#welcome-section">About</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- WELCOME -->
+  <section id="welcome-section" class="welcome-section">
+    <h1>Hey I am Ankith</h1>
+    <p>A Software Developer</p>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects-section">
+    <h2 class="projects-section-header">These are some of my projects</h2>
+
+    <p>CLICK ON IMAGE</p>
+    <p>or</p>
+    <p>Click Tribute Button</p>
+
+    <div class="projects-grid">
+      <a href="https://codepen.io/ankith-raj/pen/PoZRXQm"
+         target="_blank"
+         class="project project-tile">
+        <img
+          class="project-image"
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5a/George_H._W._Bush_with_Michael_Jackson_%28cropped%29.png"
+          alt="Tribute Project">
+        <p class="project-title">
+          <button type="button">Tribute</button>
+        </p>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="contact-section-header">
+      <h2>JOIN</h2>
+      <p>Work From Home</p>
+    </div>
+
+    <div class="contact-links">
+      <a href="https://facebook.com"
+         target="_blank"
+         class="contact-details">
+        <i class="fab fa-facebook-square"></i> Facebook
+      </a>
+
+      <br>
+
+      <a id="profile-link"
+         href="https://github.com/"
+         target="_blank"
+         class="contact-details">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
     <p>
-      Welcome! Ankith's Java web application has been successfully built using
-      <strong>Maven</strong> and deployed on <strong>Apache Tomcat 10</strong>.
+      &copy; Created for
+      <a href="https://www.google.co.in/search?q=michael+jackson"
+         target="_blank">
+        Jackson
+      </a>
     </p>
+  </footer>
 
-    <div class="badge">
-      Context Path: <strong>/tomcat-demo</strong>
-    </div>
-
-    <div>
-      <a class="btn" href="hello">Open Hello Servlet</a>
-    </div>
-
-    <footer>
-      Built with <code>mvn clean install</code> •
-      <script>
-        document.write(new Date().toLocaleString());
-      </script>
-    </footer>
-  </div>
 </body>
 </html>
-
