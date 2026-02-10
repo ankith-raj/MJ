@@ -1,0 +1,109 @@
+<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    font-size: 2rem;
+  width: 100%;
+  height: 100vh;
+  background-color: #0FF;
+ }
+.welcome-section > p {
+  font-size: 2rem;
+  font-style: italic;
+  color: var(--main-red);
+}
+.projects-section {
+  text-align: center;
+  padding: 10rem 2rem;
+  background: var(--main-blue);
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+
+
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: var(--main-gray);
+  border-top: 4px solid var(--main-red);
+}
+
+
+
+<nav id="navbar" class="nav">
+  <ul class="nav-list">
+    <li>
+      <a href="#welcome-section">About</a>
+    </li>
+    <li>
+      <a href="#projects">Work</a>
+    </li>
+    <li>
+      <a href="#contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+<section id="welcome-section" class="welcome-section">
+  <h1>Hey I am Ankith</h1>
+  <p>A Software Developer</p>
+</section>
+
+<section id="projects" class="projects-section">
+  <h2 class="projects-section-header">These are some of my projects</h2>
+        <p>CLICK ON IMAGE</p>
+      <p>or</p>
+  <p>Click Tribute Button</p>
+  <div class="projects-grid">
+    <a href="https://codepen.io/ankith-raj/pen/PoZRXQm"
+      target="_blank"
+      class="project project-tile">
+      <img  class="project-image"
+        src="https://upload.wikimedia.org/wikipedia/commons/5/5a/George_H._W._Bush_with_Michael_Jackson_%28cropped%29.png" alt="project"/>
+      <p class="project-title">
+ 
+       <button type = button> Tribute </button>
+     
+      </p>
+    </a>
+    </section>
+  
+  
+ <section id="contact" class="contact-section">
+  <div class="contact-section-header">
+    <h2>JOIN</h2>
+    <p>Work From Home</p>
+  </div>
+  <div class="contact-links">
+    <a href="https://facebook.com"
+      target="_blank"
+      class="btn contact-details">
+      <i class="fab fa-facebook-square"></i> Facebook</a>
+    </br>
+    <a id="profile-link"
+      href="https://github.com/"
+      target="_blank"
+      class="btn contact-details"
+      ><i class="fab fa-github"></i> GitHub</a> 
+     </div>
+</section>
+<footer>
+  <p>
+
+  </p>
+  <p>
+    &copy; Created for
+    <a href="https://www.google.co.in/search?q=michael+jackson&ie=UTF-8&oe=" target="_blank"
+      >Jakson<i class="By"></i
+    ></a>
+  </p>
+</footer>
